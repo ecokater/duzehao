@@ -36,8 +36,8 @@ a { color: inherit; text-decoration: none; }
 .wordmark { font-size: 12px; }
 .wordmark span, .section-no { color: var(--muted); }
 nav { display: flex; gap: 34px; }
-nav a, .text-link, .project b, footer > a { transition: opacity .3s ease; }
-nav a:hover, .text-link:hover, .project:hover b, footer > a:hover { opacity: .5; }
+nav a, .text-link, .project b, footer > a, .contact-links a { transition: opacity .3s ease; }
+nav a:hover, .text-link:hover, .project:hover b, footer > a:hover, .contact-links a:hover { opacity: .5; }
 .status { justify-self: end; display: flex; align-items: center; gap: 8px; }
 .status i { width: 6px; height: 6px; border-radius: 50%; background: #81918a; box-shadow: 0 0 10px #81918a; }
 
@@ -137,7 +137,9 @@ h1 em, h2 em { font-family: var(--serif); font-weight: 500; }
 
 footer { min-height:90vh; position:relative; padding:10vw 7vw 3vw; display:flex;flex-direction:column;justify-content:center;overflow:hidden;background:#d9dcda; }
 footer h2 { position:relative;z-index:2; }
-footer > a { position:relative;z-index:2;align-self:flex-start;border-bottom:1px solid var(--ink);padding-bottom:10px;font:10px var(--mono);letter-spacing:.15em; }
+footer > a, .contact-links a { position:relative;z-index:2;border-bottom:1px solid var(--ink);padding-bottom:10px;font:10px var(--mono);letter-spacing:.15em; }
+footer > a { align-self:flex-start; }
+.contact-links { position:relative; z-index:2; display:flex; flex-wrap:wrap; gap:14px 32px; align-self:flex-start; }
 .footer-glow { position:absolute; width:55vw;height:55vw;border-radius:50%;right:-10%;top:8%;background:radial-gradient(circle,#efdeda 0,rgba(220,211,208,.4) 38%,transparent 67%);filter:blur(12px); }
 .footer-bottom { position:absolute;left:7vw;right:7vw;bottom:28px;display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:17px;font:8px var(--mono);letter-spacing:.14em;color:var(--muted); }
 
@@ -527,7 +529,7 @@ nav a:first-child { color: var(--archive-cyan); border-bottom: 2px solid var(--a
 .collab-diagram b { color: var(--archive-cyan); }
 .collab-diagram span, .collab-diagram small { color: var(--archive-muted); }
 footer { min-height: 70vh; background: var(--archive-bg); }
-footer > a { color: var(--archive-cyan); border-color: var(--archive-cyan); }
+footer > a, .contact-links a { color: var(--archive-cyan); border-color: var(--archive-cyan); }
 .footer-bottom { border-color: #252d38; color: var(--archive-muted); }
 
 .reveal { transition: opacity .8s ease, transform .8s ease; }
