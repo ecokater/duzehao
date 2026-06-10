@@ -483,7 +483,7 @@ nav a:first-child { color: var(--archive-cyan); border-bottom: 2px solid var(--a
 .section-heading p::before { content: "// "; }
 .project-grid { max-width: 1320px; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 55px 38px; }
 .project {
-  position: relative; display: block; background: linear-gradient(145deg, rgba(26,29,39,.94), rgba(16,21,29,.96));
+  position: relative; display: flex; flex-direction: column; background: linear-gradient(145deg, rgba(26,29,39,.94), rgba(16,21,29,.96));
   border: 1px solid var(--archive-border); transition: border-color .35s ease, box-shadow .35s ease;
 }
 .project::before {
@@ -501,7 +501,7 @@ nav a:first-child { color: var(--archive-cyan); border-bottom: 2px solid var(--a
 .project.status-progress::after { content: "IN PROGRESS"; color: var(--archive-amber); border-color: rgba(255,180,84,.5); background: rgba(255,180,84,.08); }
 .project:hover { border-color: rgba(0,245,212,.48); box-shadow: 0 0 30px rgba(0,245,212,.06); }
 .project-visual, .visual-vibe, .visual-robot, .visual-lanes, .visual-claude, .visual-echo, .visual-shop {
-  height: 240px; min-height: 240px; margin: 55px 20px 0; border: 1px solid #252c35; background: #161a20;
+  flex-shrink: 0; height: 240px; min-height: 240px; margin: 55px 20px 0; border: 1px solid #252c35; background: #161a20;
 }
 .project-visual::before { top: 0; left: 0; right: 0; opacity: .25; background: var(--archive-cyan); }
 .project-visual::after {
@@ -515,7 +515,7 @@ nav a:first-child { color: var(--archive-cyan); border-bottom: 2px solid var(--a
 .visual-vibe img { width: 45%; height: auto; object-fit: contain; filter: none; }
 .orb { display: none; }
 .project-info {
-  min-height: 350px; padding: 30px 20px 25px; border: 0; background: transparent;
+  display: flex; flex-direction: column; flex: 1; min-height: 350px; padding: 30px 20px 25px; border: 0; background: transparent;
 }
 .project-info > div { padding-top: 10px; border-top: 1px solid #252d38; color: #545e70; }
 .project-info h3 { color: #b6bdca; font: 500 20px/1.4 var(--mono); letter-spacing: .06em; }
@@ -523,7 +523,7 @@ nav a:first-child { color: var(--archive-cyan); border-bottom: 2px solid var(--a
 .feature-list { border-color: #272f3a; }
 .feature-list li { color: #778294; font: 400 10px/1.8 var(--mono); }
 .feature-list li::before { color: var(--archive-cyan); }
-.project-info b { color: var(--archive-cyan); }
+.project-info b { margin-top: auto; padding-top: 16px; color: var(--archive-cyan); }
 
 .collaboration h2, footer h2 { max-width: 900px; color: #8992a3; text-shadow: none; }
 .collab-diagram { margin-top: 90px; }
