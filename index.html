@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ecokater 的个人作品集：AI 协作、机器人、系统工具与实验性产品。">
+  <title>ecokater — Edge Space</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Noto+Sans+SC:wght@300;400;500&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="wordmark" href="#top">EIE_ARCHIVE <span>v4.0.1</span></a>
+    <nav aria-label="主导航">
+      <a href="#projects">CATALOG</a>
+      <a href="#about">PROFILE</a>
+      <a href="#contact">ACCESS</a>
+    </nav>
+    <span class="status"><i></i> SYSTEM ONLINE</span>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="perspective-lines" aria-hidden="true"></div>
+      <div class="hero-copy reveal">
+        <p class="eyebrow">SYSTEM_TIME: <span id="system-time">00:00:00</span> / OPERATOR_ECOKATER</p>
+        <h1><span>ELECTRONIC</span><br>ENGINEERING<br><em>ARCHIVE_01</em></h1>
+        <p class="intro">我是 ecokater，一名电子信息工程学习者与开发者，专注嵌入式控制、机器视觉、无线通信和 AI Agent 工程工具。</p>
+        <div class="hero-tech"><span>STM32H743</span><span>OpenMV</span><span>ESP32</span><span>FreeRTOS</span><span>SwiftUI</span></div>
+        <a class="text-link" href="#projects">INITIALIZE CATALOG <span>↘</span></a>
+      </div>
+      <figure class="portrait reveal">
+        <img src="assets/portrait-liminal.png" alt="ecokater 的风格化空间人像">
+        <figcaption>
+          <span>PORTRAIT / LIMINAL STUDY</span>
+          <span>01:17 HKT</span>
+        </figcaption>
+      </figure>
+      <div class="hero-index" aria-hidden="true">01</div>
+      <div class="light-strip" aria-hidden="true"></div>
+    </section>
+
+    <section class="statement reveal" id="about">
+      <span class="section-no">02 / ENGINEERING PROFILE</span>
+      <p>连接感知、控制、通信与软件，<br>完成从原型到<span>系统实现</span>。</p>
+      <div class="statement-meta">
+        <span>电子信息工程</span>
+        <span>嵌入式 × 机器视觉 × AI 工具</span>
+        <span>开源项目开发者</span>
+      </div>
+    </section>
+
+    <section class="projects" id="projects">
+      <div class="section-heading reveal">
+        <div>
+          <span class="section-no">CATALOG / ENGINEERING_RECORDS</span>
+          <h2>PROJECT_ARCHIVE</h2>
+        </div>
+        <p>涵盖嵌入式控制、机器视觉、无线通信、macOS 原生开发与多 Agent 协作工具。</p>
+      </div>
+
+      <div class="project-grid">
+        <a class="project project-wide reveal" href="https://github.com/ecokater/VibePulse" target="_blank" rel="noreferrer">
+          <div class="project-visual visual-vibe">
+            <img src="assets/vibepulse-dashboard.png" alt="VibePulse 仪表盘界面">
+            <span class="orb orb-a"></span><span class="orb orb-b"></span>
+          </div>
+          <div class="project-info">
+            <div><span>01 / SOFTWARE TOOL</span><span>SWIFTUI / MACOS 15+</span></div>
+            <h3>VibePulse</h3>
+            <p>原生 macOS 菜单栏仪表盘，集中查看 AI 编程额度、Token 用量与电脑运行状态。</p>
+            <ul class="feature-list"><li>监控 Claude Code / Codex 额度</li><li>统计本地 Token 与费用</li><li>保持 Mac 唤醒与显示系统状态</li></ul>
+            <b>VIEW ON GITHUB ↗</b>
+          </div>
+        </a>
+
+        <a class="project project-tall reveal" href="https://github.com/ecokater/-OpenMV-STM32-tennis-pickup-robot" target="_blank" rel="noreferrer">
+          <div class="project-visual visual-robot">
+            <img src="assets/tennis-robot.jpg" alt="网球拾取机器人原型">
+          </div>
+          <div class="project-info">
+            <div><span>02 / EMBEDDED SYSTEM</span><span>STM32H743 / OPENMV / ESP32</span></div>
+            <h3>Tennis<br>Pickup Robot</h3>
+            <p>能够自动识别、追踪并拾取散落网球的移动机器人，支持触屏与网页遥控。</p>
+            <ul class="feature-list"><li>OpenMV 实时网球视觉识别</li><li>STM32 闭环运动与拾取控制</li><li>ESP32 WebSocket 无线遥控</li></ul>
+            <b>VIEW ON GITHUB ↗</b>
+          </div>
+        </a>
+
+        <a class="project reveal" href="https://github.com/ecokater/dual-lane-coding.skill" target="_blank" rel="noreferrer">
+          <div class="project-visual visual-lanes">
+            <img src="assets/cover-dual-lane.png" alt="Dual Lane Coding 双通道协作工程封面">
+          </div>
+          <div class="project-info">
+            <div><span>03 / DEV TOOL</span><span>NODE.JS / AGENT PROTOCOL</span></div>
+            <h3>Dual Lane Coding</h3>
+            <p>让 Claude 自动调用 Codex 完成独立编码任务，并由 Claude 统一设计、审查与合并。</p>
+            <ul class="feature-list"><li>自动拆分 Claude / Codex 工作通道</li><li>共享任务状态与实现记录</li><li>支持并行开发、审查与合并</li></ul>
+            <b>VIEW ON GITHUB ↗</b>
+          </div>
+        </a>
+
+        <a class="project reveal" href="https://github.com/ecokater/claude-lane-coding" target="_blank" rel="noreferrer">
+          <div class="project-visual visual-claude">
+            <img src="assets/cover-claude-lane.png" alt="Claude Lane Coding 请求与验证通道工程封面">
+          </div>
+          <div class="project-info">
+            <div><span>04 / DEV TOOL</span><span>NODE.JS / CLAUDE CLI</span></div>
+            <h3>Claude Lane Coding</h3>
+            <p>让 Codex 请求 Claude 提供设计、代码审查、合并判断与最终验证。</p>
+            <ul class="feature-list"><li>生成可追踪的 Claude 请求</li><li>直接调用 Claude CLI</li><li>记录限额、错误与验证状态</li></ul>
+            <b>VIEW ON GITHUB ↗</b>
+          </div>
+        </a>
+
+        <a class="project reveal" href="https://github.com/ecokater/Echo" target="_blank" rel="noreferrer">
+          <div class="project-visual visual-echo">
+            <img src="assets/echo-clay-desktop.png" alt="Echo 回声数字生命桌面端界面">
+          </div>
+          <div class="project-info">
+            <div><span>05 / AI APPLICATION</span><span>REACT / FASTAPI / LOCAL-FIRST</span></div>
+            <h3>echo</h3>
+            <p>本地优先、长期记忆驱动的数字生命与 AI 陪伴平台，支持 Web、桌面与移动端。</p>
+            <ul class="feature-list"><li>人格、聊天与长期记忆默认保存在本地</li><li>本地 RAG、记忆召回与聊天记录导入</li><li>React 多端客户端与 FastAPI 推理服务</li></ul>
+            <b>VIEW ON GITHUB ↗</b>
+          </div>
+        </a>
+
+        <article class="project reveal archive">
+          <div class="project-visual visual-shop">
+            <img src="assets/cover-pilips-shop.png" alt="pilips-shop 电商系统工程封面">
+          </div>
+          <div class="project-info">
+            <div><span>06 / WEB CONCEPT</span><span>INTERFACE / COMMERCE</span></div>
+            <h3>pilips-shop</h3>
+            <p>实验性电商界面概念，探索商品展示、品牌叙事与极简购物流程。</p>
+            <ul class="feature-list"><li>商品浏览与视觉陈列</li><li>极简购物路径</li><li>品牌内容表达</li></ul>
+            <b>PRIVATE CONCEPT / ARCHIVE</b>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="collaboration reveal">
+      <span class="section-no">04 / ENGINEERING CAPABILITIES</span>
+      <h2>电子信息系统能力</h2>
+      <div class="collab-diagram">
+        <div><span>01</span><b>PERCEPTION</b><small>OpenMV 机器视觉与传感器数据</small></div>
+        <i></i>
+        <div><span>02</span><b>CONTROL</b><small>STM32、PID、FreeRTOS 与电机控制</small></div>
+        <i></i>
+        <div><span>03</span><b>COMMUNICATION</b><small>UART、SPI、Wi-Fi 与 WebSocket</small></div>
+        <i></i>
+        <div><span>04</span><b>APPLICATION</b><small>LVGL、SwiftUI 与 AI 开发工具</small></div>
+      </div>
+    </section>
+
+    <footer id="contact">
+      <div class="footer-glow" aria-hidden="true"></div>
+      <p class="eyebrow">ELECTRONIC INFORMATION ENGINEERING / OPEN SOURCE</p>
+      <h2>让信号成为系统。</h2>
+      <a href="https://github.com/ecokater" target="_blank" rel="noreferrer">GITHUB / ECOKATER ↗</a>
+      <div class="footer-bottom">
+        <span>© 2026 ECOKATER</span>
+        <span>DESIGNED IN THE QUIET</span>
+        <a href="#top">BACK TO TOP ↑</a>
+      </div>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
