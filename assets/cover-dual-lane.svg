@@ -1,90 +1,106 @@
-<svg viewBox="0 0 1200 780" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dual Lane Coding — Claude and Codex parallel lanes sharing a handoff state">
+<svg viewBox="0 0 1200 780" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dual Lane Coding — Claude and Codex working in parallel lanes">
   <defs>
     <linearGradient id="dl-bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#e8e5de"/>
       <stop offset="0.5" stop-color="#e2dfd8"/>
       <stop offset="1" stop-color="#d7d4cd"/>
     </linearGradient>
-    <linearGradient id="dl-claude" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#eef0ee"/>
-      <stop offset="1" stop-color="#dde7ea"/>
+    <linearGradient id="dl-claude-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d6ad9b"/>
+      <stop offset="1" stop-color="#c39483"/>
     </linearGradient>
-    <linearGradient id="dl-codex" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#eef0e9"/>
-      <stop offset="1" stop-color="#dde6d4"/>
+    <linearGradient id="dl-codex-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5c666a"/>
+      <stop offset="1" stop-color="#454e52"/>
     </linearGradient>
     <radialGradient id="dl-vig" cx="0.5" cy="0.42" r="0.75">
       <stop offset="0.55" stop-color="#000000" stop-opacity="0"/>
       <stop offset="1" stop-color="#3a4040" stop-opacity="0.10"/>
     </radialGradient>
-    <filter id="dl-soft" x="-30%" y="-30%" width="160%" height="160%">
-      <feDropShadow dx="0" dy="16" stdDeviation="22" flood-color="#3c4242" flood-opacity="0.16"/>
+    <filter id="dl-soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="20" stdDeviation="28" flood-color="#3c3530" flood-opacity="0.22"/>
     </filter>
-    <filter id="dl-soft2" x="-40%" y="-40%" width="180%" height="180%">
-      <feDropShadow dx="0" dy="22" stdDeviation="30" flood-color="#39403f" flood-opacity="0.18"/>
+    <filter id="dl-soft-sm" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#3c3530" flood-opacity="0.16"/>
     </filter>
   </defs>
 
   <rect width="1200" height="780" fill="url(#dl-bg)"/>
 
-  <!-- faint perspective floor -->
+  <!-- faint floor -->
   <g stroke="#7f8786" stroke-opacity="0.10" stroke-width="1">
-    <path d="M120 690 L380 470"/>
-    <path d="M1080 690 L820 470"/>
-    <line x1="150" y1="610" x2="1050" y2="610"/>
-    <line x1="240" y1="540" x2="960" y2="540"/>
+    <line x1="150" y1="612" x2="1050" y2="612"/>
+    <line x1="240" y1="548" x2="960" y2="548"/>
   </g>
 
-  <!-- connectors: claude -> handoff -> codex -> back -->
-  <g fill="none" stroke-width="2.2" stroke-linecap="round">
-    <path d="M540 286 C 580 286 568 360 600 372" stroke="#9fb4bb" stroke-opacity="0.85"/>
-    <path d="M600 408 C 568 420 580 502 540 502" stroke="#a8b89a" stroke-opacity="0.85"/>
-    <path d="M660 372 C 700 360 690 286 730 286" stroke="#9fb4bb" stroke-opacity="0.4" stroke-dasharray="2 7"/>
-    <path d="M730 502 C 690 502 700 600 760 600 L 880 600" stroke="#a8b89a" stroke-opacity="0.45" stroke-dasharray="2 7"/>
+  <!-- connector between lanes -->
+  <g stroke="#9a9690" stroke-width="2" fill="none">
+    <line x1="500" y1="375" x2="700" y2="375" stroke-opacity="0.5"/>
   </g>
+  <g fill="#9a9690" fill-opacity="0.6">
+    <path d="M508 368 L494 375 L508 382 Z"/>
+    <path d="M692 368 L706 375 L692 382 Z"/>
+  </g>
+  <g filter="url(#dl-soft-sm)">
+    <rect x="578" y="353" width="44" height="44" rx="9" transform="rotate(45 600 375)" fill="#f1eee8" stroke="#2a3030" stroke-opacity="0.14"/>
+  </g>
+  <text x="600" y="440" text-anchor="middle" font-family="'DM Mono', ui-monospace, monospace" font-size="10.5" letter-spacing="3" fill="#7c8585">.AGENT-HANDOFF</text>
 
-  <!-- LANE A — CLAUDE -->
-  <g filter="url(#dl-soft)">
-    <rect x="150" y="232" width="430" height="108" rx="14" fill="url(#dl-claude)" stroke="#2a3030" stroke-opacity="0.14"/>
+  <!-- CLAUDE tile -->
+  <g transform="translate(390,335)">
+    <g filter="url(#dl-soft)">
+      <rect x="-110" y="-110" width="220" height="220" rx="24" fill="url(#dl-claude-bg)"/>
+    </g>
+    <g fill="#f6efe9">
+      <rect x="-7" y="-78" width="14" height="64" rx="7"/>
+      <rect x="-7" y="14" width="14" height="64" rx="7"/>
+      <rect x="-78" y="-7" width="64" height="14" rx="7"/>
+      <rect x="14" y="-7" width="64" height="14" rx="7"/>
+      <g opacity="0.92">
+        <rect x="-5" y="-58" width="10" height="44" rx="5" transform="rotate(45 0 0)"/>
+        <rect x="-5" y="-58" width="10" height="44" rx="5" transform="rotate(135 0 0)"/>
+        <rect x="-5" y="-58" width="10" height="44" rx="5" transform="rotate(225 0 0)"/>
+        <rect x="-5" y="-58" width="10" height="44" rx="5" transform="rotate(315 0 0)"/>
+      </g>
+      <circle r="9" fill="#f6efe9"/>
+    </g>
   </g>
-  <circle cx="184" cy="266" r="5" fill="#7d97a0"/>
-  <text x="204" y="270" font-family="'DM Mono', ui-monospace, monospace" font-size="14" letter-spacing="3" fill="#3a4242">LANE_A · CLAUDE</text>
-  <text x="184" y="318" font-family="'DM Mono', ui-monospace, monospace" font-size="10.5" letter-spacing="2.5" fill="#7c8585">DESIGN / REVIEW / MERGE</text>
-  <g fill="#9fb0b4" fill-opacity="0.8">
-    <rect x="420" y="252" width="60" height="6" rx="3"/>
-    <rect x="420" y="268" width="138" height="6" rx="3" fill-opacity="0.5"/>
-    <rect x="420" y="284" width="92" height="6" rx="3" fill-opacity="0.65"/>
-  </g>
+  <text x="390" y="494" text-anchor="middle" font-family="'DM Mono', ui-monospace, monospace" font-size="15" letter-spacing="4" fill="#3a3430">CLAUDE</text>
+  <text x="390" y="518" text-anchor="middle" font-family="'DM Mono', ui-monospace, monospace" font-size="9.5" letter-spacing="2.5" fill="#8a7e78">LANE_A · DESIGN / REVIEW / MERGE</text>
 
-  <!-- LANE B — CODEX -->
-  <g filter="url(#dl-soft)">
-    <rect x="150" y="448" width="430" height="108" rx="14" fill="url(#dl-codex)" stroke="#2a3030" stroke-opacity="0.14"/>
+  <!-- CODEX tile -->
+  <g transform="translate(810,335)">
+    <g filter="url(#dl-soft)">
+      <rect x="-110" y="-110" width="220" height="220" rx="24" fill="url(#dl-codex-bg)"/>
+    </g>
+    <g stroke="#e7e5df" stroke-width="2.4" fill="none" stroke-opacity="0.85">
+      <path d="M0 -56 L48.5 -28 L48.5 28 L0 56 L-48.5 28 L-48.5 -28 Z"/>
+      <line x1="0" y1="0" x2="0" y2="-56"/>
+      <line x1="0" y1="0" x2="48.5" y2="-28"/>
+      <line x1="0" y1="0" x2="48.5" y2="28"/>
+      <line x1="0" y1="0" x2="0" y2="56"/>
+      <line x1="0" y1="0" x2="-48.5" y2="28"/>
+      <line x1="0" y1="0" x2="-48.5" y2="-28"/>
+    </g>
+    <g fill="#e7e5df">
+      <circle cx="0" cy="-56" r="6.5"/>
+      <circle cx="48.5" cy="-28" r="6.5"/>
+      <circle cx="48.5" cy="28" r="6.5"/>
+      <circle cx="0" cy="56" r="6.5"/>
+      <circle cx="-48.5" cy="28" r="6.5"/>
+      <circle cx="-48.5" cy="-28" r="6.5"/>
+      <circle cx="0" cy="0" r="9"/>
+    </g>
   </g>
-  <circle cx="184" cy="482" r="5" fill="#869a78"/>
-  <text x="204" y="486" font-family="'DM Mono', ui-monospace, monospace" font-size="14" letter-spacing="3" fill="#3a4242">LANE_B · CODEX</text>
-  <text x="184" y="534" font-family="'DM Mono', ui-monospace, monospace" font-size="10.5" letter-spacing="2.5" fill="#7c8585">IMPLEMENT / DIFF / TEST</text>
-  <g fill="#a6b69a" fill-opacity="0.8">
-    <rect x="420" y="468" width="118" height="6" rx="3" fill-opacity="0.5"/>
-    <rect x="420" y="484" width="74" height="6" rx="3"/>
-    <rect x="420" y="500" width="138" height="6" rx="3" fill-opacity="0.6"/>
-  </g>
+  <text x="810" y="494" text-anchor="middle" font-family="'DM Mono', ui-monospace, monospace" font-size="15" letter-spacing="4" fill="#3a3430">CODEX</text>
+  <text x="810" y="518" text-anchor="middle" font-family="'DM Mono', ui-monospace, monospace" font-size="9.5" letter-spacing="2.5" fill="#8a7e78">LANE_B · IMPLEMENT / DIFF / TEST</text>
 
-  <!-- central handoff node -->
-  <g filter="url(#dl-soft2)">
-    <rect x="600" y="354" width="60" height="60" rx="12" transform="rotate(45 630 384)" fill="#f1efe9" stroke="#2a3030" stroke-opacity="0.16"/>
+  <!-- skill tag -->
+  <g filter="url(#dl-soft-sm)">
+    <rect x="478" y="180" width="244" height="42" rx="21" fill="#f1eee8" stroke="#2a3030" stroke-opacity="0.14"/>
   </g>
-  <g transform="translate(630 384)" stroke="#7e8d8c" stroke-opacity="0.6" stroke-width="1.4">
-    <line x1="-13" y1="-5" x2="13" y2="-5"/>
-    <line x1="-13" y1="2" x2="13" y2="2"/>
-    <line x1="-13" y1="9" x2="6" y2="9"/>
-  </g>
-
-  <!-- handoff label card -->
-  <g filter="url(#dl-soft)">
-    <rect x="700" y="352" width="232" height="64" rx="10" fill="#ece9e2" stroke="#2a3030" stroke-opacity="0.12"/>
-  </g>
-  <text x="720" y="380" font-family="'DM Mono', ui-monospace, monospace" font-size="12" letter-spacing="1.5" fill="#3a4242">.agent-handoff</text>
-  <text x="720" y="400" font-family="'DM Mono', ui-monospace, monospace" font-size="9" letter-spacing="2" fill="#7c8585">STATE ▸ HYBRID_READY</text>
+  <circle cx="506" cy="201" r="4.5" fill="#9aa9a3"/>
+  <text x="522" y="206" font-family="'DM Mono', ui-monospace, monospace" font-size="13" letter-spacing="3.5" fill="#3a3430">SKILL · DUAL-LANE</text>
 
   <rect width="1200" height="780" fill="url(#dl-vig)"/>
 </svg>

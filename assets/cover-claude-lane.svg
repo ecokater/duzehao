@@ -5,24 +5,23 @@
       <stop offset="0.5" stop-color="#e1ddd9"/>
       <stop offset="1" stop-color="#d8d2d3"/>
     </linearGradient>
-    <radialGradient id="cl-chamber" cx="0.42" cy="0.36" r="0.8">
-      <stop offset="0" stop-color="#f3f1ec"/>
-      <stop offset="0.7" stop-color="#e7e1e4"/>
-      <stop offset="1" stop-color="#ddd5da"/>
-    </radialGradient>
-    <radialGradient id="cl-core" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#cdbcd2"/>
-      <stop offset="1" stop-color="#cdbcd2" stop-opacity="0"/>
-    </radialGradient>
+    <linearGradient id="cl-claude-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d6ad9b"/>
+      <stop offset="1" stop-color="#c39483"/>
+    </linearGradient>
+    <linearGradient id="cl-codex-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5c666a"/>
+      <stop offset="1" stop-color="#454e52"/>
+    </linearGradient>
     <radialGradient id="cl-vig" cx="0.5" cy="0.42" r="0.78">
       <stop offset="0.55" stop-color="#000000" stop-opacity="0"/>
       <stop offset="1" stop-color="#3a3a40" stop-opacity="0.11"/>
     </radialGradient>
     <filter id="cl-soft" x="-40%" y="-40%" width="180%" height="180%">
-      <feDropShadow dx="0" dy="18" stdDeviation="26" flood-color="#3b3a40" flood-opacity="0.18"/>
+      <feDropShadow dx="0" dy="20" stdDeviation="28" flood-color="#3b3a40" flood-opacity="0.2"/>
     </filter>
     <filter id="cl-soft-sm" x="-50%" y="-50%" width="200%" height="200%">
-      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#3b3a40" flood-opacity="0.16"/>
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#3b3a40" flood-opacity="0.16"/>
     </filter>
   </defs>
 
@@ -30,65 +29,95 @@
 
   <!-- faint floor -->
   <g stroke="#80807f" stroke-opacity="0.09" stroke-width="1">
-    <line x1="160" y1="600" x2="1040" y2="600"/>
-    <line x1="250" y1="535" x2="950" y2="535"/>
+    <line x1="160" y1="612" x2="1040" y2="612"/>
+    <line x1="250" y1="548" x2="950" y2="548"/>
   </g>
 
-  <!-- CODEX source node (left) -->
-  <g filter="url(#cl-soft-sm)">
-    <rect x="150" y="318" width="150" height="150" rx="16" fill="#edeae4" stroke="#2c2c32" stroke-opacity="0.14"/>
+  <!-- CODEX tile (left) -->
+  <g transform="translate(360,335)">
+    <g filter="url(#cl-soft)">
+      <rect x="-100" y="-100" width="200" height="200" rx="22" fill="url(#cl-codex-bg)"/>
+    </g>
+    <g stroke="#e7e5df" stroke-width="2.2" fill="none" stroke-opacity="0.85">
+      <path d="M0 -50 L43 -25 L43 25 L0 50 L-43 25 L-43 -25 Z"/>
+      <line x1="0" y1="0" x2="0" y2="-50"/>
+      <line x1="0" y1="0" x2="43" y2="-25"/>
+      <line x1="0" y1="0" x2="43" y2="25"/>
+      <line x1="0" y1="0" x2="0" y2="50"/>
+      <line x1="0" y1="0" x2="-43" y2="25"/>
+      <line x1="0" y1="0" x2="-43" y2="-25"/>
+    </g>
+    <g fill="#e7e5df">
+      <circle cx="0" cy="-50" r="6"/>
+      <circle cx="43" cy="-25" r="6"/>
+      <circle cx="43" cy="25" r="6"/>
+      <circle cx="0" cy="50" r="6"/>
+      <circle cx="-43" cy="25" r="6"/>
+      <circle cx="-43" cy="-25" r="6"/>
+      <circle cx="0" cy="0" r="8"/>
+    </g>
   </g>
-  <g transform="translate(225 360)">
-    <rect x="-34" y="-10" width="68" height="68" rx="8" fill="none" stroke="#8a8d86" stroke-opacity="0.55" stroke-width="1.4"/>
-    <rect x="-22" y="2" width="44" height="6" rx="3" fill="#9a9d94"/>
-    <rect x="-22" y="16" width="30" height="6" rx="3" fill="#9a9d94" fill-opacity="0.6"/>
-    <rect x="-22" y="30" width="38" height="6" rx="3" fill="#9a9d94" fill-opacity="0.8"/>
-  </g>
-  <text x="225" y="500" text-anchor="middle" font-family="'DM Mono', ui-monospace, monospace" font-size="11" letter-spacing="3" fill="#7c8585">CODEX</text>
+  <text x="360" y="474" text-anchor="middle" font-family="'DM Mono', ui-monospace, monospace" font-size="14" letter-spacing="4" fill="#3a3a40">CODEX</text>
 
   <!-- request card in transit -->
-  <g filter="url(#cl-soft-sm)" transform="rotate(-3 470 388)">
-    <rect x="392" y="352" width="156" height="74" rx="10" fill="#efeae6" stroke="#2c2c32" stroke-opacity="0.13"/>
+  <g filter="url(#cl-soft-sm)" transform="rotate(-3 600 330)">
+    <rect x="522" y="294" width="156" height="72" rx="10" fill="#efeae6" stroke="#2c2c32" stroke-opacity="0.13"/>
   </g>
-  <text x="412" y="382" font-family="'DM Mono', ui-monospace, monospace" font-size="10.5" letter-spacing="1.5" fill="#3a3a40">CLAUDE_REQUEST</text>
+  <text x="542" y="324" font-family="'DM Mono', ui-monospace, monospace" font-size="10.5" letter-spacing="1.5" fill="#3a3a40">CLAUDE_REQUEST</text>
   <g fill="#b9a9c0" fill-opacity="0.85">
-    <rect x="412" y="394" width="58" height="5" rx="2.5"/>
-    <rect x="412" y="406" width="100" height="5" rx="2.5" fill-opacity="0.5"/>
+    <rect x="542" y="336" width="58" height="5" rx="2.5"/>
+    <rect x="542" y="348" width="100" height="5" rx="2.5" fill-opacity="0.5"/>
   </g>
 
-  <!-- flow dots codex -> chamber -->
+  <!-- flow dots codex -> claude -->
   <g fill="#a99bb0">
-    <circle cx="318" cy="392" r="3" opacity="0.5"/>
-    <circle cx="346" cy="391" r="3.4" opacity="0.7"/>
-    <circle cx="374" cy="390" r="3.8" opacity="0.9"/>
-    <circle cx="566" cy="390" r="3.8" opacity="0.9"/>
-    <circle cx="596" cy="390" r="3.4" opacity="0.7"/>
-    <circle cx="626" cy="390" r="3" opacity="0.5"/>
+    <circle cx="466" cy="335" r="3" opacity="0.5"/>
+    <circle cx="490" cy="334" r="3.4" opacity="0.7"/>
+    <circle cx="514" cy="333" r="3.8" opacity="0.9"/>
+    <circle cx="690" cy="333" r="3.8" opacity="0.9"/>
+    <circle cx="716" cy="334" r="3.4" opacity="0.7"/>
+    <circle cx="742" cy="335" r="3" opacity="0.5"/>
   </g>
 
-  <!-- CLAUDE chamber (right) with signal rings -->
-  <g transform="translate(820 390)">
-    <circle r="210" fill="none" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1"/>
-    <circle r="160" fill="none" stroke="#ffffff" stroke-opacity="0.6" stroke-width="1"/>
-    <circle r="112" fill="none" stroke="#ad9fb6" stroke-opacity="0.4" stroke-width="1"/>
+  <!-- CLAUDE tile (right) with signal rings -->
+  <g transform="translate(840,335)">
+    <circle r="195" fill="none" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1"/>
+    <circle r="148" fill="none" stroke="#ffffff" stroke-opacity="0.6" stroke-width="1"/>
     <g filter="url(#cl-soft)">
-      <rect x="-78" y="-78" width="156" height="156" rx="20" fill="url(#cl-chamber)" stroke="#2c2c32" stroke-opacity="0.15"/>
+      <rect x="-100" y="-100" width="200" height="200" rx="22" fill="url(#cl-claude-bg)"/>
     </g>
-    <circle r="62" fill="url(#cl-core)"/>
-    <circle r="13" fill="#b6a4bd"/>
-    <circle r="13" fill="none" stroke="#ffffff" stroke-opacity="0.5" stroke-width="6"/>
+    <g fill="#f6efe9">
+      <rect x="-7" y="-72" width="14" height="58" rx="7"/>
+      <rect x="-7" y="14" width="14" height="58" rx="7"/>
+      <rect x="-72" y="-7" width="58" height="14" rx="7"/>
+      <rect x="14" y="-7" width="58" height="14" rx="7"/>
+      <g opacity="0.92">
+        <rect x="-5" y="-52" width="10" height="40" rx="5" transform="rotate(45 0 0)"/>
+        <rect x="-5" y="-52" width="10" height="40" rx="5" transform="rotate(135 0 0)"/>
+        <rect x="-5" y="-52" width="10" height="40" rx="5" transform="rotate(225 0 0)"/>
+        <rect x="-5" y="-52" width="10" height="40" rx="5" transform="rotate(315 0 0)"/>
+      </g>
+      <circle r="8" fill="#f6efe9"/>
+    </g>
   </g>
-  <text x="820" y="624" text-anchor="middle" font-family="'DM Mono', ui-monospace, monospace" font-size="11" letter-spacing="3" fill="#7c8585">CLAUDE</text>
+  <text x="840" y="474" text-anchor="middle" font-family="'DM Mono', ui-monospace, monospace" font-size="14" letter-spacing="4" fill="#3a3a40">CLAUDE</text>
 
   <!-- returned verdict tokens -->
   <g font-family="'DM Mono', ui-monospace, monospace" font-size="9" letter-spacing="1.5" fill="#4a4a50">
-    <g filter="url(#cl-soft-sm)"><rect x="980" y="300" width="92" height="28" rx="14" fill="#efece6" stroke="#2c2c32" stroke-opacity="0.12"/></g>
-    <text x="996" y="318">DESIGN</text>
-    <g filter="url(#cl-soft-sm)"><rect x="1004" y="366" width="92" height="28" rx="14" fill="#efece6" stroke="#2c2c32" stroke-opacity="0.12"/></g>
-    <text x="1020" y="384">REVIEW</text>
-    <g filter="url(#cl-soft-sm)"><rect x="980" y="432" width="92" height="28" rx="14" fill="#efece6" stroke="#2c2c32" stroke-opacity="0.12"/></g>
-    <text x="996" y="450">VERIFY</text>
+    <g filter="url(#cl-soft-sm)"><rect x="1006" y="262" width="92" height="28" rx="14" fill="#efece6" stroke="#2c2c32" stroke-opacity="0.12"/></g>
+    <text x="1022" y="280">DESIGN</text>
+    <g filter="url(#cl-soft-sm)"><rect x="1018" y="321" width="92" height="28" rx="14" fill="#efece6" stroke="#2c2c32" stroke-opacity="0.12"/></g>
+    <text x="1034" y="339">REVIEW</text>
+    <g filter="url(#cl-soft-sm)"><rect x="1006" y="380" width="92" height="28" rx="14" fill="#efece6" stroke="#2c2c32" stroke-opacity="0.12"/></g>
+    <text x="1022" y="398">VERIFY</text>
   </g>
+
+  <!-- skill tag -->
+  <g filter="url(#cl-soft-sm)">
+    <rect x="478" y="180" width="244" height="42" rx="21" fill="#f1eee8" stroke="#2a3030" stroke-opacity="0.14"/>
+  </g>
+  <circle cx="506" cy="201" r="4.5" fill="#ad9fb6"/>
+  <text x="522" y="206" font-family="'DM Mono', ui-monospace, monospace" font-size="13" letter-spacing="3.5" fill="#3a3430">SKILL · CLAUDE-LANE</text>
 
   <rect width="1200" height="780" fill="url(#cl-vig)"/>
 </svg>
