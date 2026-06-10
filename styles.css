@@ -373,6 +373,7 @@ section:target .reveal, footer:target .reveal { opacity: 1; transform: none; }
   --archive-muted: #535c6d;
   --archive-cyan: #00f5d4;
   --archive-pink: #ff006e;
+  --archive-amber: #ffb454;
 }
 
 html { background: var(--archive-bg); }
@@ -496,6 +497,7 @@ nav a:first-child { color: var(--archive-cyan); border-bottom: 2px solid var(--a
 .project-grid { counter-reset: project; }
 .project { counter-increment: project; }
 .project:nth-child(3n)::after { content: "ACTIVE"; color: var(--archive-pink); border-color: rgba(255,0,110,.5); background: rgba(255,0,110,.07); }
+.project.status-progress::after { content: "IN PROGRESS"; color: var(--archive-amber); border-color: rgba(255,180,84,.5); background: rgba(255,180,84,.08); }
 .project:hover { border-color: rgba(0,245,212,.48); box-shadow: 0 0 30px rgba(0,245,212,.06); }
 .project-visual, .visual-vibe, .visual-robot, .visual-lanes, .visual-claude, .visual-echo, .visual-shop {
   height: 240px; min-height: 240px; margin: 55px 20px 0; border: 1px solid #252c35; background: #161a20;
