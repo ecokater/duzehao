@@ -1,0 +1,98 @@
+<svg viewBox="0 0 1200 780" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="pilips-shop — experimental minimal commerce interface concept">
+  <defs>
+    <linearGradient id="ps-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e9e5de"/>
+      <stop offset="0.5" stop-color="#e4ded6"/>
+      <stop offset="1" stop-color="#dcd3cc"/>
+    </linearGradient>
+    <linearGradient id="ps-window" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f3efe9"/>
+      <stop offset="1" stop-color="#e8e0da"/>
+    </linearGradient>
+    <radialGradient id="ps-vig" cx="0.5" cy="0.42" r="0.78">
+      <stop offset="0.55" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#40393a" stop-opacity="0.11"/>
+    </radialGradient>
+    <filter id="ps-soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="20" stdDeviation="28" flood-color="#42393a" flood-opacity="0.18"/>
+    </filter>
+    <filter id="ps-soft-sm" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#42393a" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="780" fill="url(#ps-bg)"/>
+
+  <!-- faint floor -->
+  <g stroke="#867f7d" stroke-opacity="0.09" stroke-width="1">
+    <line x1="150" y1="612" x2="1050" y2="612"/>
+    <line x1="240" y1="548" x2="960" y2="548"/>
+  </g>
+
+  <!-- storefront window -->
+  <g filter="url(#ps-soft)">
+    <rect x="150" y="150" width="600" height="430" rx="18" fill="url(#ps-window)" stroke="#2e2829" stroke-opacity="0.14"/>
+  </g>
+  <!-- window top bar -->
+  <line x1="150" y1="206" x2="750" y2="206" stroke="#2e2829" stroke-opacity="0.1"/>
+  <g fill="#a89c98">
+    <circle cx="178" cy="178" r="4"/><circle cx="194" cy="178" r="4" fill-opacity="0.6"/><circle cx="210" cy="178" r="4" fill-opacity="0.4"/>
+  </g>
+  <text x="700" y="182" text-anchor="end" font-family="'DM Mono', ui-monospace, monospace" font-size="9" letter-spacing="2" fill="#8a807d">/ STORE</text>
+
+  <!-- brand wordmark -->
+  <text x="186" y="280" font-family="'Playfair Display', Georgia, serif" font-style="italic" font-size="60" fill="#9a8b88">pilips</text>
+  <text x="190" y="306" font-family="'DM Mono', ui-monospace, monospace" font-size="10" letter-spacing="6" fill="#8a807d">QUIET COMMERCE</text>
+
+  <!-- product cards on shelf -->
+  <g>
+    <g filter="url(#ps-soft-sm)"><rect x="186" y="346" width="158" height="190" rx="10" fill="#efe9e3" stroke="#2e2829" stroke-opacity="0.1"/></g>
+    <rect x="214" y="372" width="102" height="86" rx="8" fill="#d8cdc8"/>
+    <rect x="214" y="476" width="70" height="7" rx="3.5" fill="#a89c98"/>
+    <rect x="214" y="492" width="44" height="7" rx="3.5" fill="#c2b6b1"/>
+
+    <g filter="url(#ps-soft-sm)"><rect x="364" y="346" width="158" height="190" rx="10" fill="#efe9e3" stroke="#2e2829" stroke-opacity="0.1"/></g>
+    <rect x="392" y="372" width="102" height="86" rx="8" fill="#cdd3d2"/>
+    <rect x="392" y="476" width="70" height="7" rx="3.5" fill="#a89c98"/>
+    <rect x="392" y="492" width="52" height="7" rx="3.5" fill="#c2b6b1"/>
+
+    <g filter="url(#ps-soft-sm)"><rect x="542" y="346" width="158" height="190" rx="10" fill="#efe9e3" stroke="#2e2829" stroke-opacity="0.1"/></g>
+    <rect x="570" y="372" width="102" height="86" rx="8" fill="#d3cdd6"/>
+    <rect x="570" y="476" width="70" height="7" rx="3.5" fill="#a89c98"/>
+    <rect x="570" y="492" width="38" height="7" rx="3.5" fill="#c2b6b1"/>
+  </g>
+
+  <!-- minimal checkout flow (right) -->
+  <g transform="translate(806 168)">
+    <text x="0" y="0" font-family="'DM Mono', ui-monospace, monospace" font-size="9" letter-spacing="3" fill="#8a807d">CHECKOUT FLOW</text>
+    <!-- vertical step rail -->
+    <line x1="14" y1="36" x2="14" y2="300" stroke="#9a8e8a" stroke-opacity="0.35" stroke-width="1.4"/>
+    <g font-family="'DM Mono', ui-monospace, monospace" font-size="11" letter-spacing="1.5" fill="#4a4242">
+      <circle cx="14" cy="48" r="9" fill="#cdb9b4"/><circle cx="14" cy="48" r="9" fill="none" stroke="#ffffff" stroke-opacity="0.5" stroke-width="3"/>
+      <text x="40" y="52">BROWSE</text>
+      <circle cx="14" cy="128" r="9" fill="#efe9e3" stroke="#9a8e8a" stroke-opacity="0.5"/>
+      <text x="40" y="132">CART</text>
+      <circle cx="14" cy="208" r="9" fill="#efe9e3" stroke="#9a8e8a" stroke-opacity="0.5"/>
+      <text x="40" y="212">PAY</text>
+      <circle cx="14" cy="288" r="9" fill="#efe9e3" stroke="#9a8e8a" stroke-opacity="0.5"/>
+      <text x="40" y="292">DONE</text>
+    </g>
+  </g>
+
+  <!-- cart pill -->
+  <g filter="url(#ps-soft-sm)" transform="translate(820 400)">
+    <rect x="0" y="0" width="232" height="150" rx="12" fill="#efeae4" stroke="#2e2829" stroke-opacity="0.1"/>
+  </g>
+  <g transform="translate(820 400)" font-family="'DM Mono', ui-monospace, monospace">
+    <text x="22" y="34" font-size="9" letter-spacing="2.5" fill="#8a807d">CART · 03 ITEMS</text>
+    <line x1="22" y1="50" x2="210" y2="50" stroke="#2e2829" stroke-opacity="0.08"/>
+    <g font-size="10" fill="#4a4242">
+      <rect x="22" y="64" width="26" height="26" rx="5" fill="#d8cdc8"/>
+      <text x="60" y="82">item_a</text><text x="210" y="82" text-anchor="end" fill="#8a807d">—</text>
+      <rect x="22" y="100" width="26" height="26" rx="5" fill="#cdd3d2"/>
+      <text x="60" y="118">item_b</text><text x="210" y="118" text-anchor="end" fill="#8a807d">—</text>
+    </g>
+  </g>
+
+  <rect width="1200" height="780" fill="url(#ps-vig)"/>
+</svg>
