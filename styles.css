@@ -424,7 +424,23 @@ nav a:first-child { color: var(--archive-cyan); border-bottom: 2px solid var(--a
 }
 .hero-tech span:nth-child(2), .hero-tech span:nth-child(4) { color: var(--archive-cyan); border-color: rgba(0,245,212,.25); }
 .text-link { color: var(--archive-cyan); border-color: rgba(0,245,212,.38); }
-.portrait { width: 92px; right: 3vw; bottom: 3vw; opacity: .32; border-color: #29313c; box-shadow: none; filter: grayscale(1) contrast(1.15); }
+.portrait {
+  width: 96px; right: 3vw; bottom: 3vw; opacity: .68;
+  border-color: rgba(0,245,212,.22);
+  background: #0a1119;
+  box-shadow: 0 0 0 1px rgba(255,0,110,.08), 0 0 28px rgba(0,245,212,.08);
+  filter: none;
+}
+.portrait img {
+  filter: saturate(.62) brightness(.58) contrast(1.18) hue-rotate(12deg);
+  mix-blend-mode: screen;
+}
+.portrait::after {
+  background:
+    linear-gradient(145deg, rgba(0,245,212,.12), transparent 45%, rgba(255,0,110,.1)),
+    linear-gradient(180deg, transparent 45%, rgba(9,13,18,.55));
+  mix-blend-mode: color;
+}
 .light-strip { display: none; }
 .hero-index { color: rgba(255,0,110,.06); font-size: 120px; }
 
@@ -480,10 +496,10 @@ nav a:first-child { color: var(--archive-cyan); border-bottom: 2px solid var(--a
   color: rgba(0,245,212,.55); font: 400 7px var(--mono); letter-spacing: .12em;
 }
 .project-visual img {
-  width: 100%; height: 100%; object-fit: cover; opacity: .52;
-  filter: grayscale(.9) sepia(.12) hue-rotate(120deg) saturate(.8) contrast(1.16) brightness(.65);
+  width: 100%; height: 100%; object-fit: cover; opacity: 1;
+  filter: none;
 }
-.visual-vibe img { width: 45%; height: auto; object-fit: contain; }
+.visual-vibe img { width: 45%; height: auto; object-fit: contain; filter: none; }
 .orb { display: none; }
 .project-info {
   min-height: 350px; padding: 30px 20px 25px; border: 0; background: transparent;
@@ -514,7 +530,7 @@ footer > a { color: var(--archive-cyan); border-color: var(--archive-cyan); }
   .wordmark::before { height: 20px; }
   .hero-copy { padding: 21vh 20px 80px; }
   .hero h1 { font-size: clamp(36px,12vw,54px); letter-spacing: .08em; }
-  .portrait { display: none; }
+  .portrait { display: block; width: 72px; right: 16px; bottom: 16px; opacity: .58; }
   .project-grid { grid-template-columns: 1fr; }
   .project-visual, .visual-vibe, .visual-robot, .visual-lanes, .visual-claude, .visual-echo, .visual-shop { height: 240px; min-height: 240px; }
   .statement, .collaboration, footer { padding: 85px 22px; }
