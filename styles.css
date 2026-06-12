@@ -534,6 +534,11 @@ nav a:first-child { color: var(--archive-cyan); border-bottom: 2px solid var(--a
 footer { min-height: 70vh; background: var(--archive-bg); }
 footer > a, .contact-links a { color: var(--archive-cyan); border-color: var(--archive-cyan); }
 .footer-bottom { border-color: #252d38; color: var(--archive-muted); }
+.footer-bottom .icp-link {
+  color: var(--archive-muted);
+  transition: color .3s ease;
+}
+.footer-bottom .icp-link:hover { color: var(--archive-cyan); }
 
 .reveal { transition: opacity .8s ease, transform .8s ease; }
 
