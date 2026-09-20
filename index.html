@@ -3,245 +3,509 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="杜泽浩的个人简历：西昌学院电子信息工程 2026 届本科，专注嵌入式开发、机器视觉与 AI Native 工程实践，含项目、实习与荣誉经历。">
-  <title>杜泽浩 · 个人简历 | 嵌入式 × AI Native 工程</title>
+  <meta name="description" content="杜泽浩的个人主页：西昌学院电子信息工程 2026 届本科，专注嵌入式开发、机器视觉与 AI Native 工程实践，含项目作品、工作经历、专业技能与荣誉。">
+  <title>杜泽浩 · ZE-HAO DU | 嵌入式 × AI Native 工程</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Noto+Sans+SC:wght@300;400;500;700&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <nav class="topbar" aria-label="简历导航">
-    <div class="topbar-inner">
-      <a class="brand" href="#top">杜泽浩<span class="brand-sub">ZE-HAO DU</span></a>
-      <div class="topnav">
-        <a href="#strengths">优势</a>
-        <a href="#education">教育</a>
-        <a href="#skills">技能</a>
-        <a href="#projects">项目</a>
-        <a href="#experience">经历</a>
-        <a href="#honors">荣誉</a>
-        <a href="#contact">联系</a>
-      </div>
-      <a class="btn-download" href="assets/resume-duzehao.pdf" download target="_blank" rel="noreferrer">下载简历 PDF</a>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="wordmark" href="#top">泽浩's HOMEPAGE <span>v5.0.0</span></a>
+    <nav class="site-nav" id="site-nav" aria-label="主导航">
+      <a href="#profile">PROFILE</a>
+      <a href="#skills">SKILLS</a>
+      <a href="#projects">PROJECTS</a>
+      <a href="#worklog">WORK_LOG</a>
+      <a href="#honors">HONORS</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+    <div class="header-right">
+      <a class="btn-resume" href="assets/resume-duzehao.pdf" download target="_blank" rel="noreferrer">RESUME.PDF ↘</a>
+      <span class="status"><i></i> ONLINE · <span class="clock">00:00:00</span></span>
     </div>
-  </nav>
+  </header>
 
-  <main class="page" id="top">
-    <header class="resume-head reveal">
-      <div class="head-main">
-        <h1>杜泽浩<span class="pinyin">ZE-HAO DU</span></h1>
-        <p class="headline">电子信息工程 · 2026 届本科 · 嵌入式 × 机器视觉 × AI Native 工程</p>
-        <ul class="contact-chips">
-          <li><span class="chip-label">电话</span><a href="tel:18116762829">181 1676 2829</a></li>
-          <li><span class="chip-label">邮箱</span><a href="mailto:du1197560589@gmail.com">du1197560589@gmail.com</a></li>
-          <li><span class="chip-label">地址</span><span class="chip-value">四川 · 成都</span></li>
-          <li><span class="chip-label">主页</span><a href="https://introduction.duzehao.online" target="_blank" rel="noreferrer">introduction.duzehao.online</a></li>
-          <li><span class="chip-label">GitHub</span><a href="https://github.com/ecokater" target="_blank" rel="noreferrer">github.com/ecokater</a></li>
-        </ul>
-      </div>
-      <figure class="head-photo">
-        <img src="assets/portrait-id.png" alt="杜泽浩的证件照">
-      </figure>
-    </header>
+  <main id="top">
 
-    <section id="strengths" class="reveal">
-      <h2 class="sec-title">个人优势</h2>
-      <div class="strength-grid">
-        <div class="strength-card">
-          <h3>AI Native 工程闭环</h3>
-          <p>以 Codex、Claude Code 为核心构建“需求拆解 → 产品设计 → 代码生成 → 调试验证 → 迭代优化”的完整开发闭环，独立交付多个系统并完成服务器部署上线与线上验证。</p>
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-index" aria-hidden="true">01</div>
+
+      <div class="hero-inner">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">// SYSTEM_TIME <span class="clock">--:--:--</span> · OPERATOR_ECOKATER · LOC 四川成都</p>
+
+          <h1>
+            <span class="h1-cn">杜泽浩</span>
+            <span class="h1-en">ZE-HAO&nbsp;DU</span>
+          </h1>
+
+          <p class="hero-role">电子信息工程 · 2026 届本科 <em>嵌入式 × 机器视觉 × AI NATIVE 工程</em></p>
+
+          <p class="intro">能读懂原理图、跑得动 FreeRTOS，也能用 Codex / Claude Code 把一个需求从拆解一路推到部署上线。做过网球捡球机器人、端侧地震检测装置，也独立交付过真实运营中的微信商城系统。</p>
+
+          <ul class="hero-tech" aria-label="技术标签">
+            <li>C / C++</li><li>PYTHON</li><li>LUA</li><li>STM32</li><li>FREERTOS</li><li>OPENMV</li><li>RAG</li><li>AI AGENT</li>
+          </ul>
+
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="assets/resume-duzehao.pdf" download target="_blank" rel="noreferrer">下载简历 PDF <span>↘</span></a>
+            <a class="btn btn-ghost" href="#projects">查看项目作品 <span>→</span></a>
+            <a class="btn btn-ghost" href="#contact">联系我 <span>↗</span></a>
+          </div>
+
+          <dl class="hero-stats" id="hero-stats">
+            <div><dt data-count="2.5" data-suffix=" 年">0</dt><dd>实验室科研助理</dd></div>
+            <div><dt data-count="2" data-suffix=" 段">0</dt><dd>企业实习经历</dd></div>
+            <div><dt data-count="7" data-suffix=" +">0</dt><dd>交付 / 开源项目</dd></div>
+            <div><dt data-count="8" data-suffix=" 类">0</dt><dd>工程技能矩阵</dd></div>
+          </dl>
         </div>
-        <div class="strength-card">
-          <h3>嵌入式全链路开发</h3>
-          <p>熟练 STM32、ESP32 与华为海思 MCU，掌握 FreeRTOS、LVGL 与 OpenMV 视觉识别，能阅读原理图并排查信号链路，完成“感知 - 决策 - 执行”系统闭环。</p>
-        </div>
-        <div class="strength-card">
-          <h3>真实业务落地经验</h3>
-          <p>独立交付微信小程序商城与配套仓库管理系统，打通商品、订单、库存与多角色审批流程，系统已真实投入使用并支撑业务运营与持续迭代。</p>
-        </div>
-        <div class="strength-card">
-          <h3>科研与创新成果</h3>
-          <p>实用新型专利一份、软件著作一份；蓝桥杯 Python 组三等奖；两年半实验室科研助理经历，具备将数据处理流程转化为可复用工具的实践经验。</p>
-        </div>
-      </div>
-    </section>
 
-    <section id="education" class="reveal">
-      <h2 class="sec-title">教育背景</h2>
-      <div class="entry">
-        <div class="entry-head">
-          <h3>西昌学院｜电子信息工程（本科）</h3>
-          <span class="entry-time">2022 - 2026</span>
-        </div>
-        <p class="entry-note">主修：嵌入式软件设计、数据库技术及应用、计算机网络、算法与数据结构、高级语言程序设计、数字信号处理、通信原理、ARM 单片机原理、数字/模拟电路与技术等。</p>
-      </div>
-    </section>
+        <div class="hero-side">
+          <figure class="portrait reveal">
+            <span class="bracket tl" aria-hidden="true"></span>
+            <span class="bracket tr" aria-hidden="true"></span>
+            <span class="bracket bl" aria-hidden="true"></span>
+            <span class="bracket br" aria-hidden="true"></span>
+            <img src="assets/portrait-original.jpg" alt="杜泽浩的个人照片">
+            <figcaption>
+              <span>PORTRAIT / ZE-HAO DU</span>
+              <span>REC ●</span>
+            </figcaption>
+          </figure>
 
-    <section id="skills" class="reveal">
-      <h2 class="sec-title">专业技能</h2>
-      <dl class="skill-list">
-        <div class="skill-row"><dt>编程语言</dt><dd>熟练掌握 C / C++、Python、Lua；熟悉数据结构（链表、栈、队列、树、图）与常用算法；了解多线程、锁机制与进程间通信。</dd></div>
-        <div class="skill-row"><dt>嵌入式开发</dt><dd>熟练 STM32、ESP32 与华为海思 MCU 开发，掌握 GPIO / UART / I2C / SPI / PWM / CAN 等驱动；熟练 FreeRTOS 移植与任务管理、LVGL 与 EEZ Studio 界面开发；熟练 OpenMV 视觉识别，能阅读原理图并排查信号链路。</dd></div>
-        <div class="skill-row"><dt>通信与系统</dt><dd>熟悉 TCP / UDP / MQTT 等通信模型及广播 / 组播应用；熟悉 Linux / 类 Unix 常用命令与 Shell 环境操作；熟练 gcc 编译与调试。</dd></div>
-        <div class="skill-row"><dt>AI 应用理解</dt><dd>了解大模型应用、Prompt 优化、RAG 检索增强、知识问答、内容生成、Agent / 工作流等基础概念，并能结合业务场景拆解功能。</dd></div>
-        <div class="skill-row"><dt>AI 工具链</dt><dd>熟练使用 Codex、Claude Code 与 Orca（ADE）进行需求拆解、代码生成、调试验证与多 Agent 并行开发，具备 Skill / Workflow 及 Loop Engineering 实践经验；能运用无限画布、OpenDesign 完成原型验证，并以 Obsidian 沉淀知识库。</dd></div>
-        <div class="skill-row"><dt>数据与自动化</dt><dd>具备 Python 数据分析与机器学习建模能力；熟练自动化脚本与网络数据采集，提升调试与测试效率。</dd></div>
-        <div class="skill-row"><dt>工程工具</dt><dd>熟练 Keil / STM32CubeIDE / CubeMX / CLion / VSCode / Cursor 嵌入式开发；熟练 Git / CMake 工程管理；了解后端接口、数据库与基础部署。</dd></div>
-        <div class="skill-row"><dt>产品工程</dt><dd>能从需求文档出发完成原型验证、功能联调、问题反馈、效果评估与迭代记录，具备较强学习能力和工程落地意识。</dd></div>
-      </dl>
-    </section>
-
-    <section id="projects" class="reveal">
-      <h2 class="sec-title">项目经历</h2>
-
-      <article class="entry">
-        <div class="entry-head">
-          <h3>基于 OpenMV 的 STM32 自主网球捡球机器人系统</h3>
-          <a class="entry-link" href="https://github.com/ecokater/-OpenMV-STM32-tennis-pickup-robot" target="_blank" rel="noreferrer">GitHub ↗</a>
-        </div>
-        <ul class="tag-row"><li>OpenMV H7</li><li>STM32H743</li><li>ESP32</li><li>FreeRTOS</li><li>LVGL</li><li>Qt 6</li><li>C/C++</li><li>Python</li><li>UDP</li><li>SPI / UART / DMA</li></ul>
-        <ul class="bullet-list">
-          <li><b>视觉识别：</b>在 OpenMV 端基于 Python 实现 Lab 颜色空间阈值分割与霍夫圆变换，完成复杂背景下网球识别、坐标解算，并结合 AprilTag 电子围栏约束目标区域。</li>
-          <li><b>系统闭环：</b>以 STM32H743 + FreeRTOS 为主控，集成 OpenMV 与 ESP32 构建“感知-决策-执行”闭环；经 SPI + UART + DMA 实时传输视觉数据执行路径规划。</li>
-          <li><b>交互与调试：</b>完成 800×480 LCD 触摸屏 UI、模块化外设驱动、定时器中断；开发 Qt 6 上位机，通过 UDP 实现视频回传、模式切换与远程控制。</li>
-        </ul>
-      </article>
-
-      <article class="entry">
-        <div class="entry-head">
-          <h3>基于 STM32H743 的微型地震与人员检测装置开发</h3>
-        </div>
-        <ul class="tag-row"><li>STM32CubeIDE</li><li>NanoEdge AI</li><li>Arduino</li><li>ADXL355</li><li>Air780G</li><li>ESP32</li><li>C/C++</li><li>Python</li></ul>
-        <ul class="bullet-list">
-          <li><b>端侧模型：</b>以 STM32H743 为主控，集成 ADXL355 传感器与 Air780G 模组，设计高频数据采集机制，引入卡尔曼滤波降噪并部署 NanoEdge AI 端侧模型识别墙体震动。</li>
-          <li><b>数据与告警：</b>利用 ESP32 Wi-Fi Sniffer 捕获 MAC 与 RSSI 开发人员密度估算算法；基于 4G 自定义协议实现灾情数据低延迟云端同步与告警。</li>
-        </ul>
-      </article>
-
-      <article class="entry">
-        <div class="entry-head">
-          <h3>智冷优选微信商城与配套仓库管理系统</h3>
-        </div>
-        <ul class="tag-row"><li>微信小程序</li><li>仓库管理系统</li><li>服务器部署</li><li>AI Native 开发</li></ul>
-        <ul class="bullet-list">
-          <li><b>AI 原生工程：</b>以 Claude、Codex 为核心，融合 Agentic Coding 与 LLM 辅助工程，构建“需求拆解→产品设计→代码生成→调试验证→迭代优化”的 AI 开发闭环，独立交付微信小程序商城与配套仓库管理系统，并独立完成服务器环境搭建、部署上线与线上验证。</li>
-          <li><b>业务闭环：</b>打通商品展示、下单、订单处理与库存管理流程；系统已真实落地并投入使用，支撑真实业务运营。</li>
-          <li><b>管理能力：</b>围绕商品、订单、用户和库存构建统一管理能力，支持多角色权限与审批流程；上线后持续跟进问题修复与版本迭代，保障系统持续稳定运行。</li>
-        </ul>
-      </article>
-
-      <h3 class="sub-title">开源与个人项目</h3>
-      <div class="side-grid">
-        <a class="side-card" href="https://ecokater.github.io/VibePulse/" target="_blank" rel="noreferrer">
-          <h4>VibePulse<span class="arrow">↗</span></h4>
-          <p>原生 macOS 菜单栏仪表盘，集中查看 AI 编程额度、Token 用量与电脑运行状态。</p>
-          <ul class="tag-row"><li>SwiftUI</li><li>macOS 15+</li></ul>
-        </a>
-        <a class="side-card" href="https://github.com/ecokater/dual-lane-coding.skill" target="_blank" rel="noreferrer">
-          <h4>Dual Lane Coding<span class="arrow">↗</span></h4>
-          <p>让 Claude 自动调用 Codex 完成独立编码任务，并由 Claude 统一设计、审查与合并。</p>
-          <ul class="tag-row"><li>Node.js</li><li>Agent Protocol</li></ul>
-        </a>
-        <a class="side-card" href="https://github.com/ecokater/claude-lane-coding" target="_blank" rel="noreferrer">
-          <h4>Claude Lane Coding<span class="arrow">↗</span></h4>
-          <p>让 Codex 请求 Claude 提供设计、代码审查、合并判断与最终验证。</p>
-          <ul class="tag-row"><li>Node.js</li><li>Claude CLI</li></ul>
-        </a>
-        <a class="side-card" href="https://ecokater.github.io/echo-web/#showcase" target="_blank" rel="noreferrer">
-          <h4>Echo 回声<span class="arrow">↗</span></h4>
-          <p>本地优先、长期记忆驱动的数字生命与 AI 陪伴平台，支持 Web、桌面与移动端。</p>
-          <ul class="tag-row"><li>React</li><li>FastAPI</li><li>Local-first</li></ul>
-        </a>
-        <div class="side-card">
-          <h4>商城 xAI 智能后台管理系统<span class="badge">进行中</span></h4>
-          <p>AI 驱动的电商后台管理系统，整合商品、订单与用户数据，由智能体辅助运营决策与流程自动化。</p>
-          <ul class="tag-row"><li>Admin Dashboard</li><li>E-commerce</li></ul>
+          <div class="terminal reveal" aria-hidden="true">
+            <div class="terminal-bar"><span></span><span></span><span></span><b>ecokater@archive: ~/profile</b></div>
+            <div class="terminal-body" id="boot-log"></div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="experience" class="reveal">
-      <h2 class="sec-title">工作经历</h2>
-      <p class="section-note">两段企业级产品与策划实践经历，以及两年半实验室科研助理经历。</p>
-      <div class="exp-timeline" aria-label="经历时间线">
-        <div class="tl-item">
-          <span class="tl-time">2023.04 - 2025.10</span>
-          <span class="tl-role">科研助理</span>
-          <span class="tl-org">凉山州中心城市地表形变监测研究与应用实验室</span>
+    <!-- ============ TICKER ============ -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>STM32H743</span><i>◆</i><span>FREERTOS</span><i>◆</i><span>OPENMV VISION</span><i>◆</i><span>LVGL / EEZ STUDIO</span><i>◆</i><span>ESP32 / MQTT</span><i>◆</i><span>NANOEDGE AI</span><i>◆</i><span>CODEX / CLAUDE CODE</span><i>◆</i><span>RAG / AGENT WORKFLOW</span><i>◆</i><span>PYTHON DATA</span><i>◆</i><span>GIT / CMAKE</span><i>◆</i>
+        <span>STM32H743</span><i>◆</i><span>FREERTOS</span><i>◆</i><span>OPENMV VISION</span><i>◆</i><span>LVGL / EEZ STUDIO</span><i>◆</i><span>ESP32 / MQTT</span><i>◆</i><span>NANOEDGE AI</span><i>◆</i><span>CODEX / CLAUDE CODE</span><i>◆</i><span>RAG / AGENT WORKFLOW</span><i>◆</i><span>PYTHON DATA</span><i>◆</i><span>GIT / CMAKE</span><i>◆</i>
+      </div>
+    </div>
+
+    <!-- ============ 01 PROFILE ============ -->
+    <section class="section" id="profile">
+      <div class="section-inner">
+        <div class="section-head reveal">
+          <div>
+            <span class="section-no">01 / PROFILE</span>
+            <h2>个人优势</h2>
+          </div>
+          <p>// 硬件到软件的完整工程意识，加上 AI Native 的交付速度。</p>
         </div>
-        <div class="tl-item">
-          <span class="tl-time">2026.03 - 2026.06</span>
-          <span class="tl-role">游戏策划实习生</span>
-          <span class="tl-org">成都深蓝幻想科技有限公司</span>
+
+        <div class="adv-grid">
+          <article class="adv-card reveal">
+            <span class="adv-no">ADV_01</span>
+            <h3>AI Native 工程闭环</h3>
+            <p>以 Codex、Claude Code 为核心构建“需求拆解 → 产品设计 → 代码生成 → 调试验证 → 迭代优化”的完整开发闭环，独立交付多个系统并完成服务器环境搭建、部署上线与线上验证。</p>
+            <ul class="chip-row"><li>Agentic Coding</li><li>Skill / Workflow</li><li>多 Agent 并行</li></ul>
+          </article>
+
+          <article class="adv-card reveal">
+            <span class="adv-no">ADV_02</span>
+            <h3>嵌入式全链路开发</h3>
+            <p>熟练 STM32、ESP32 与华为海思 MCU 开发，掌握 FreeRTOS 移植与任务管理、LVGL 界面开发与 OpenMV 视觉识别，能阅读原理图并排查信号链路，完成“感知 - 决策 - 执行”系统闭环。</p>
+            <ul class="chip-row"><li>STM32 / ESP32</li><li>FreeRTOS</li><li>OpenMV</li></ul>
+          </article>
+
+          <article class="adv-card reveal">
+            <span class="adv-no">ADV_03</span>
+            <h3>真实业务落地经验</h3>
+            <p>独立交付微信小程序商城与配套仓库管理系统，打通商品展示、下单、订单处理与库存管理流程，支持多角色权限与审批；系统已真实落地并投入使用，支撑业务运营与持续版本迭代。</p>
+            <ul class="chip-row"><li>微信小程序</li><li>仓库管理系统</li><li>部署运维</li></ul>
+          </article>
+
+          <article class="adv-card reveal">
+            <span class="adv-no">ADV_04</span>
+            <h3>科研与创新成果</h3>
+            <p>实用新型专利一份、软件著作权一份；蓝桥杯 Python 组三等奖；两年半实验室科研助理经历，负责数据爬取、自动化整理分析与可视化，具备把数据处理流程沉淀为可复用工具的实践经验。</p>
+            <ul class="chip-row"><li>专利 / 软著</li><li>ArcGIS + DL</li><li>数据自动化</li></ul>
+          </article>
         </div>
-        <div class="tl-item">
-          <span class="tl-time">2026.07 - 2026.08</span>
-          <span class="tl-role">AI Native 游戏产品主理人</span>
-          <span class="tl-org">成都爽翻互娱科技有限公司</span>
+
+        <div class="edu-card reveal">
+          <span class="section-no">EDUCATION / 教育背景</span>
+          <div class="edu-main">
+            <h3>西昌学院 <em>｜</em> 电子信息工程（本科）</h3>
+            <span class="edu-time">2022 — 2026</span>
+          </div>
+          <p class="edu-note">主修：嵌入式软件设计、数据库技术及应用、计算机网络、算法与数据结构、高级语言程序设计、数字信号处理、通信原理、ARM 单片机原理、数字 / 模拟电路与技术等。</p>
         </div>
       </div>
-      <article class="entry">
-        <div class="entry-head">
-          <h3>成都爽翻互娱科技有限公司｜AI Native 游戏产品主理人</h3>
-          <span class="entry-side"><span class="role-badge badge-intern">企业实习</span><span class="entry-time">2026.07 - 2026.08</span></span>
-        </div>
-        <ul class="bullet-list">
-          <li><b>AI 驱动产品全链路：</b>借助 AI Agent 完成海外休闲益智（Puzzle）游戏的市场调研、用户画像与用户群体分析及竞品分析，反编译竞品代码解析玩法逻辑与数值设计，对标 CPI、eCPM 等买量与变现指标，推进游戏设计、项目立项与研发落地；上线后跟踪 DAU、留存率、ROI 等核心指标，基于数据调整买量策略，形成经营闭环。</li>
-          <li><b>设计与独立开发：</b>使用 Claude / Codex / GPT Image 2 / 无限画布完成玩法、系统、数值与美术风格设计，并独立完成游戏开发实现、测试与版本迭代。</li>
-        </ul>
-      </article>
-      <article class="entry">
-        <div class="entry-head">
-          <h3>成都深蓝幻想科技有限公司｜游戏策划实习生</h3>
-          <span class="entry-side"><span class="role-badge badge-intern">企业实习</span><span class="entry-time">2026.03 - 2026.06</span></span>
-        </div>
-        <ul class="bullet-list">
-          <li><b>数值配置与导表：</b>负责游戏数值与功能配置表的整理、校对与导出，保障数据在客户端/服务端间的同步与版本一致性。</li>
-          <li><b>FGUI 界面制作：</b>使用 FairyGUI 完成多个游戏内功能界面的搭建、组件绑定与样式还原，配合美术、程序完成联调与效果验证。</li>
-        </ul>
-      </article>
-
-      <article class="entry">
-        <div class="entry-head">
-          <h3>凉山州中心城市地表形变监测研究与应用实验室｜科研助理</h3>
-          <span class="entry-side"><span class="role-badge badge-research">实验室科研</span><span class="entry-time">2023.04 - 2025.10</span></span>
-        </div>
-        <ul class="bullet-list">
-          <li>使用 Google 卫星图像与 ArcGIS 深度学习模块识别西昌城市建筑基底，并结合层高数据实现建筑群自动化建模；基于 Dijkstra 算法完成地震灾害疏散路线分析与规划。</li>
-          <li>负责数据爬取、自动化整理与分析、数据可视化及实验室管理维护，具备将数据处理流程转化为可复用工具的实践经验。</li>
-        </ul>
-      </article>
     </section>
 
-    <section id="honors" class="reveal">
-      <h2 class="sec-title">荣誉证书</h2>
-      <ul class="honor-list">
-        <li>实用新型专利一份</li>
-        <li>软件著作一份</li>
-        <li>大学英语四级（CET-4）</li>
-        <li>蓝桥杯 Python 组三等奖</li>
-        <li>鸣夏杯大学网球赛单打第二名</li>
-      </ul>
+    <!-- ============ 02 SKILLS ============ -->
+    <section class="section section-alt" id="skills">
+      <div class="section-inner">
+        <div class="section-head reveal">
+          <div>
+            <span class="section-no">02 / SKILL_MATRIX</span>
+            <h2>专业技能</h2>
+          </div>
+          <p>// 8 组能力模块，覆盖底层驱动、通信协议、AI 工具链与产品工程。</p>
+        </div>
+
+        <div class="skill-grid">
+          <article class="skill-card reveal" style="--lvl:92%">
+            <div class="skill-top"><h3>嵌入式开发</h3><span class="skill-en">EMBEDDED</span><b>92</b></div>
+            <div class="skill-bar"><i></i></div>
+            <p>熟练 STM32、ESP32 与华为海思 MCU 开发，掌握 GPIO / UART / I2C / SPI / PWM / CAN 等驱动；熟练 FreeRTOS 移植与任务管理、LVGL 与 EEZ Studio 界面开发；熟练 OpenMV 视觉识别，能阅读原理图并排查信号链路。</p>
+          </article>
+
+          <article class="skill-card reveal" style="--lvl:90%">
+            <div class="skill-top"><h3>编程语言</h3><span class="skill-en">LANGUAGES</span><b>90</b></div>
+            <div class="skill-bar"><i></i></div>
+            <p>熟练掌握 C / C++、Python、Lua；熟悉链表、栈、队列、树、图等数据结构与常用算法；了解多线程、锁机制与进程间通信。</p>
+          </article>
+
+          <article class="skill-card reveal" style="--lvl:90%">
+            <div class="skill-top"><h3>AI 工具链</h3><span class="skill-en">AI TOOLCHAIN</span><b>90</b></div>
+            <div class="skill-bar"><i></i></div>
+            <p>熟练使用 Codex、Claude Code 与 Orca（ADE）进行需求拆解、代码生成、调试验证与多 Agent 并行开发，具备 Skill / Workflow 及 Loop Engineering 实践经验；能运用无限画布、OpenDesign 完成原型验证，并以 Obsidian 沉淀知识库。</p>
+          </article>
+
+          <article class="skill-card reveal" style="--lvl:86%">
+            <div class="skill-top"><h3>工程工具</h3><span class="skill-en">ENGINEERING TOOLS</span><b>86</b></div>
+            <div class="skill-bar"><i></i></div>
+            <p>熟练 Keil / STM32CubeIDE / CubeMX / CLion / VSCode / Cursor 嵌入式开发；熟练 Git / CMake 工程管理；了解后端接口、数据库与基础部署。</p>
+          </article>
+
+          <article class="skill-card reveal" style="--lvl:84%">
+            <div class="skill-top"><h3>通信与系统</h3><span class="skill-en">COMMS &amp; OS</span><b>84</b></div>
+            <div class="skill-bar"><i></i></div>
+            <p>熟悉 TCP / UDP / MQTT 等通信模型及广播 / 组播应用；熟悉 Linux / 类 Unix 常用命令与 Shell 环境操作；熟练 gcc 编译与调试。</p>
+          </article>
+
+          <article class="skill-card reveal" style="--lvl:82%">
+            <div class="skill-top"><h3>AI 应用理解</h3><span class="skill-en">AI CONCEPTS</span><b>82</b></div>
+            <div class="skill-bar"><i></i></div>
+            <p>了解大模型应用、Prompt 优化、RAG 检索增强、知识问答、内容生成、Agent / 工作流等基础概念，并能结合业务场景拆解功能。</p>
+          </article>
+
+          <article class="skill-card reveal" style="--lvl:80%">
+            <div class="skill-top"><h3>数据与自动化</h3><span class="skill-en">DATA &amp; AUTOMATION</span><b>80</b></div>
+            <div class="skill-bar"><i></i></div>
+            <p>具备 Python 数据分析与机器学习建模能力；熟练编写自动化脚本与网络数据采集，显著提升调试与测试效率。</p>
+          </article>
+
+          <article class="skill-card reveal" style="--lvl:85%">
+            <div class="skill-top"><h3>产品工程</h3><span class="skill-en">PRODUCT ENGINEERING</span><b>85</b></div>
+            <div class="skill-bar"><i></i></div>
+            <p>能从需求文档出发完成原型验证、功能联调、问题反馈、效果评估与迭代记录，具备较强学习能力和工程落地意识。</p>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <section id="about-me" class="reveal">
-      <h2 class="sec-title">自我评价</h2>
-      <p class="summary-box">具备从需求拆解、接口联调、功能调试到部署验证的完整工程意识；学习能力强，对 AI 应用落地有持续兴趣，能快速理解业务场景并主动推进问题闭环。</p>
+    <!-- ============ 03 PROJECTS ============ -->
+    <section class="section" id="projects">
+      <div class="section-inner">
+        <div class="section-head reveal">
+          <div>
+            <span class="section-no">03 / PROJECT_ARCHIVE</span>
+            <h2>项目经历</h2>
+          </div>
+          <p>// 嵌入式系统、端侧 AI、微信商城与开源 Agent 工具，均已完成实物或线上验证。</p>
+        </div>
+
+        <div class="project-grid">
+
+          <a class="project project-wide reveal" href="https://github.com/ecokater/-OpenMV-STM32-tennis-pickup-robot" target="_blank" rel="noreferrer">
+            <div class="project-visual visual-photo">
+              <img src="assets/tennis-robot.jpg" alt="自主网球捡球机器人原型">
+            </div>
+            <div class="project-info">
+              <div class="p-meta"><span>01 / EMBEDDED SYSTEM</span><span>OPENMV H7 · STM32H743 · ESP32 · FREERTOS · LVGL · QT6</span></div>
+              <h3>基于 OpenMV 的 STM32<br>自主网球捡球机器人系统</h3>
+              <ul class="feature-list">
+                <li><b>视觉识别：</b>在 OpenMV 端基于 Python 实现 Lab 颜色空间阈值分割与霍夫圆变换，完成复杂背景下网球识别、坐标解算，并结合 AprilTag 电子围栏约束目标区域。</li>
+                <li><b>系统闭环：</b>以 STM32H743 + FreeRTOS 为主控，集成 OpenMV 与 ESP32 构建“感知-决策-执行”闭环；经 SPI + UART + DMA 实时传输视觉数据执行路径规划。</li>
+                <li><b>交互与调试：</b>完成 800×480 LCD 触摸屏 UI、模块化外设驱动与定时器中断；开发 Qt 6 上位机，通过 UDP 实现视频回传、模式切换与远程控制。</li>
+              </ul>
+              <span class="p-link">VIEW ON GITHUB ↗</span>
+            </div>
+          </a>
+
+          <article class="project reveal">
+            <div class="project-visual visual-seis">
+              <svg viewBox="0 0 400 200" preserveAspectRatio="none" role="img" aria-label="地震波形示意">
+                <g class="seis-grid">
+                  <line x1="0" y1="50" x2="400" y2="50"></line>
+                  <line x1="0" y1="100" x2="400" y2="100"></line>
+                  <line x1="0" y1="150" x2="400" y2="150"></line>
+                </g>
+                <polyline class="seis-wave" points="0,100 14,99 26,102 38,97 52,101 64,96 74,108 82,88 90,116 98,72 106,132 114,84 122,110 132,98 146,101 158,95 168,105 178,99 190,102 202,97 212,112 220,86 228,120 236,78 244,126 252,92 262,104 274,99 288,101 300,96 310,106 320,98 334,101 348,97 360,103 372,99 386,101 400,100"></polyline>
+              </svg>
+              <span class="seis-tag">ADXL355 · NANOEDGE-AI · WAVEFORM</span>
+            </div>
+            <div class="project-info">
+              <div class="p-meta"><span>02 / EDGE AI DEVICE</span><span>STM32H743 · AIR780G</span></div>
+              <h3>微型地震与人员检测装置</h3>
+              <ul class="feature-list">
+                <li><b>端侧模型：</b>以 STM32H743 为主控，集成 ADXL355 传感器与 Air780G 模组，设计高频数据采集机制，引入卡尔曼滤波降噪并部署 NanoEdge AI 端侧模型识别墙体震动。</li>
+                <li><b>数据与告警：</b>利用 ESP32 Wi-Fi Sniffer 捕获 MAC 与 RSSI 开发人员密度估算算法；基于 4G 自定义协议实现灾情数据低延迟云端同步与告警。</li>
+              </ul>
+              <span class="p-link p-static">DEVICE / FIRMWARE</span>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-visual visual-cover">
+              <img src="assets/cover-pilips-shop.svg" alt="智冷优选微信商城与仓库管理系统封面">
+            </div>
+            <div class="project-info">
+              <div class="p-meta"><span>03 / AI SYSTEM</span><span>微信小程序 · 后台 · 部署</span></div>
+              <h3>智冷优选微信商城与仓库管理系统</h3>
+              <ul class="feature-list">
+                <li><b>AI 原生工程：</b>以 Claude、Codex 为核心，融合 Agentic Coding 与 LLM 辅助工程，构建“需求拆解→产品设计→代码生成→调试验证→迭代优化”的开发闭环，独立交付微信小程序商城与配套仓库管理系统，并独立完成服务器环境搭建、部署上线与线上验证。</li>
+                <li><b>业务闭环：</b>打通商品展示、下单、订单处理与库存管理流程；系统已真实落地并投入使用，支撑真实业务运营。</li>
+                <li><b>管理能力：</b>围绕商品、订单、用户和库存构建统一管理能力，支持多角色权限与审批流程；上线后持续跟进问题修复与版本迭代。</li>
+              </ul>
+              <span class="p-link p-static">DEPLOYED / IN USE</span>
+            </div>
+          </article>
+
+          <a class="project reveal" href="https://ecokater.github.io/VibePulse/" target="_blank" rel="noreferrer">
+            <div class="project-visual visual-photo visual-fit">
+              <img src="assets/vibepulse-dashboard.png" alt="VibePulse 仪表盘界面">
+            </div>
+            <div class="project-info">
+              <div class="p-meta"><span>04 / SOFTWARE TOOL</span><span>SWIFTUI · MACOS 15+</span></div>
+              <h3>VibePulse</h3>
+              <p class="p-desc">原生 macOS 菜单栏仪表盘，集中查看 AI 编程额度、Token 用量与电脑运行状态。</p>
+              <ul class="feature-list">
+                <li>监控 Claude Code / Codex 额度</li>
+                <li>统计本地 Token 与费用</li>
+                <li>保持 Mac 唤醒与显示系统状态</li>
+              </ul>
+              <span class="p-link">VIEW PROJECT ↗</span>
+            </div>
+          </a>
+
+          <a class="project reveal" href="https://ecokater.github.io/echo-web/#showcase" target="_blank" rel="noreferrer">
+            <div class="project-visual visual-photo">
+              <img src="assets/echo-clay-desktop.png" alt="Echo 回声数字生命桌面端界面">
+            </div>
+            <div class="project-info">
+              <div class="p-meta"><span>05 / AI APPLICATION</span><span>REACT · FASTAPI · LOCAL-FIRST</span></div>
+              <h3>Echo 回声</h3>
+              <p class="p-desc">本地优先、长期记忆驱动的数字生命与 AI 陪伴平台，支持 Web、桌面与移动端。</p>
+              <ul class="feature-list">
+                <li>人格、聊天与长期记忆默认保存在本地</li>
+                <li>本地 RAG、记忆召回与聊天记录导入</li>
+                <li>React 多端客户端与 FastAPI 推理服务</li>
+              </ul>
+              <span class="p-link">VIEW PROJECT ↗</span>
+            </div>
+          </a>
+
+          <a class="project reveal" href="https://github.com/ecokater/dual-lane-coding.skill" target="_blank" rel="noreferrer">
+            <div class="project-visual visual-cover">
+              <img src="assets/cover-dual-lane.svg" alt="Dual Lane Coding 双通道协作工程封面">
+            </div>
+            <div class="project-info">
+              <div class="p-meta"><span>06 / DEV TOOL</span><span>NODE.JS · AGENT PROTOCOL</span></div>
+              <h3>Dual Lane Coding</h3>
+              <p class="p-desc">让 Claude 自动调用 Codex 完成独立编码任务，并由 Claude 统一设计、审查与合并。</p>
+              <ul class="feature-list">
+                <li>自动拆分 Claude / Codex 工作通道</li>
+                <li>共享任务状态与实现记录</li>
+                <li>支持并行开发、审查与合并</li>
+              </ul>
+              <span class="p-link">VIEW ON GITHUB ↗</span>
+            </div>
+          </a>
+
+          <a class="project reveal" href="https://github.com/ecokater/claude-lane-coding" target="_blank" rel="noreferrer">
+            <div class="project-visual visual-cover">
+              <img src="assets/cover-claude-lane.svg" alt="Claude Lane Coding 请求与验证通道工程封面">
+            </div>
+            <div class="project-info">
+              <div class="p-meta"><span>07 / DEV TOOL</span><span>NODE.JS · CLAUDE CLI</span></div>
+              <h3>Claude Lane Coding</h3>
+              <p class="p-desc">让 Codex 请求 Claude 提供设计、代码审查、合并判断与最终验证。</p>
+              <ul class="feature-list">
+                <li>生成可追踪的 Claude 请求</li>
+                <li>直接调用 Claude CLI</li>
+                <li>记录限额、错误与验证状态</li>
+              </ul>
+              <span class="p-link">VIEW ON GITHUB ↗</span>
+            </div>
+          </a>
+
+          <a class="project project-more reveal" href="https://github.com/ecokater" target="_blank" rel="noreferrer">
+            <div class="more-body">
+              <span class="section-no">MORE_RECORDS</span>
+              <h3>全部开源记录</h3>
+              <p>Skill、脚本、嵌入式实验与前端原型，都放在 GitHub 上持续更新。</p>
+              <span class="p-link">GITHUB.COM/ECOKATER ↗</span>
+            </div>
+          </a>
+
+        </div>
+      </div>
     </section>
 
-    <footer id="contact" class="reveal">
-      <h2 class="sec-title">联系我</h2>
-      <p class="contact-lead">欢迎就嵌入式开发、AI 应用工程或产品工程方向的机会与我联系。</p>
-      <div class="contact-links">
-        <a href="tel:18116762829">电话 · 181 1676 2829</a>
-        <a href="mailto:du1197560589@gmail.com">邮箱 · du1197560589@gmail.com</a>
-        <a href="https://github.com/ecokater" target="_blank" rel="noreferrer">GitHub · ecokater ↗</a>
-        <a href="assets/resume-duzehao.pdf" download target="_blank" rel="noreferrer">简历 · PDF 下载</a>
+    <!-- ============ 04 WORK LOG ============ -->
+    <section class="section section-alt" id="worklog">
+      <div class="section-inner">
+        <div class="section-head reveal">
+          <div>
+            <span class="section-no">04 / WORK_LOG</span>
+            <h2>工作经历</h2>
+          </div>
+          <p>// 从实验室科研助理到游戏公司实习，再到 AI Native 产品主理人。</p>
+        </div>
+
+        <div class="timeline">
+
+          <article class="tl-item reveal">
+            <div class="tl-side">
+              <span class="tl-node" aria-hidden="true"></span>
+              <span class="tl-time">2026.07 — 2026.08</span>
+              <span class="tl-badge badge-corp">企业实习</span>
+            </div>
+            <div class="tl-body">
+              <h3>成都爽翻互娱科技有限公司</h3>
+              <p class="tl-role">AI Native 游戏产品主理人</p>
+              <ul class="bullet-list">
+                <li><b>AI 驱动产品全链路：</b>借助 AI Agent 完成海外休闲益智（Puzzle）游戏的市场调研、用户画像与群体分析及竞品分析，反编译竞品代码解析玩法逻辑与数值设计，对标 CPI、eCPM 等买量与变现指标，推进游戏设计、项目立项与研发落地；上线后跟踪 DAU、留存率、ROI 等核心指标，基于数据调整买量策略，形成经营闭环。</li>
+                <li><b>设计与独立开发：</b>使用 Claude / Codex / GPT Image 2 / 无限画布完成玩法、系统、数值与美术风格设计，并独立完成游戏开发实现、测试与版本迭代。</li>
+              </ul>
+              <ul class="chip-row"><li>市场调研</li><li>数值设计</li><li>买量 / 变现</li><li>独立开发</li></ul>
+            </div>
+          </article>
+
+          <article class="tl-item reveal">
+            <div class="tl-side">
+              <span class="tl-node" aria-hidden="true"></span>
+              <span class="tl-time">2026.03 — 2026.06</span>
+              <span class="tl-badge badge-corp">企业实习</span>
+            </div>
+            <div class="tl-body">
+              <h3>成都深蓝幻想科技有限公司</h3>
+              <p class="tl-role">游戏策划实习生</p>
+              <ul class="bullet-list">
+                <li><b>数值配置与导表：</b>负责游戏数值与功能配置表的整理、校对与导出，保障数据在客户端 / 服务端间的同步与版本一致性。</li>
+                <li><b>FGUI 界面制作：</b>使用 FairyGUI 完成多个游戏内功能界面的搭建、组件绑定与样式还原，配合美术、程序完成联调与效果验证。</li>
+              </ul>
+              <ul class="chip-row"><li>FairyGUI</li><li>数值配置表</li><li>联调验证</li></ul>
+            </div>
+          </article>
+
+          <article class="tl-item reveal">
+            <div class="tl-side">
+              <span class="tl-node" aria-hidden="true"></span>
+              <span class="tl-time">2023.04 — 2025.10</span>
+              <span class="tl-badge badge-lab">实验室科研</span>
+            </div>
+            <div class="tl-body">
+              <h3>凉山州中心城市地表形变监测研究与应用实验室</h3>
+              <p class="tl-role">科研助理</p>
+              <ul class="bullet-list">
+                <li>使用 Google 卫星图像与 ArcGIS 深度学习模块识别西昌城市建筑基底，并结合层高数据实现建筑群自动化建模；基于 Dijkstra 算法完成地震灾害疏散路线分析与规划。</li>
+                <li>负责数据爬取、自动化整理与分析、数据可视化及实验室管理维护，具备将数据处理流程转化为可复用工具的实践经验。</li>
+              </ul>
+              <ul class="chip-row"><li>ArcGIS + 深度学习</li><li>Dijkstra 路径规划</li><li>数据爬取与可视化</li></ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATEMENT ============ -->
+    <section class="statement reveal">
+      <span class="section-no">05 / SELF_ASSESSMENT</span>
+      <p>连接感知、控制、通信与软件，<br>完成从原型到<span>系统实现</span>。</p>
+      <p class="statement-note">具备从需求拆解、接口联调、功能调试到部署验证的完整工程意识；学习能力强，对 AI 应用落地有持续兴趣，能快速理解业务场景并主动推进问题闭环。</p>
+    </section>
+
+    <!-- ============ 06 HONORS ============ -->
+    <section class="section" id="honors">
+      <div class="section-inner">
+        <div class="section-head reveal">
+          <div>
+            <span class="section-no">06 / HONORS</span>
+            <h2>荣誉证书</h2>
+          </div>
+          <p>// 专利、软著、语言与竞赛成绩记录。</p>
+        </div>
+
+        <div class="honor-grid">
+          <article class="honor-card reveal">
+            <span class="honor-glyph">◈</span>
+            <span class="honor-en">UTILITY MODEL PATENT</span>
+            <h3>实用新型专利</h3>
+            <p>一份 · 已授权</p>
+          </article>
+          <article class="honor-card reveal">
+            <span class="honor-glyph">◇</span>
+            <span class="honor-en">SOFTWARE COPYRIGHT</span>
+            <h3>软件著作权</h3>
+            <p>一份 · 已登记</p>
+          </article>
+          <article class="honor-card reveal">
+            <span class="honor-glyph">▲</span>
+            <span class="honor-en">LANQIAO CUP · PYTHON</span>
+            <h3>蓝桥杯 Python 组</h3>
+            <p>三等奖</p>
+          </article>
+          <article class="honor-card reveal">
+            <span class="honor-glyph">✦</span>
+            <span class="honor-en">CET-4</span>
+            <h3>大学英语四级</h3>
+            <p>已通过</p>
+          </article>
+          <article class="honor-card reveal">
+            <span class="honor-glyph">●</span>
+            <span class="honor-en">TENNIS SINGLES</span>
+            <h3>鸣夏杯大学网球赛</h3>
+            <p>单打第二名</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <footer class="site-footer" id="contact">
+      <div class="footer-glow" aria-hidden="true"></div>
+      <div class="section-inner footer-inner">
+        <p class="eyebrow reveal">// HARDWARE × SOFTWARE × AI AGENT / OPEN FOR OPPORTUNITIES</p>
+        <h2 class="reveal">联系我。</h2>
+        <div class="contact-links reveal">
+          <a href="tel:18116762829">TEL · 181 1676 2829</a>
+          <a href="mailto:du1197560589@gmail.com">MAIL · DU1197560589@GMAIL.COM</a>
+          <a href="https://github.com/ecokater" target="_blank" rel="noreferrer">GITHUB · ECOKATER ↗</a>
+          <a href="https://introduction.duzehao.online" target="_blank" rel="noreferrer">SITE · INTRODUCTION.DUZEHAO.ONLINE</a>
+          <span class="contact-plain">LOC · 四川 成都</span>
+        </div>
+        <a class="btn btn-primary footer-cta reveal" href="assets/resume-duzehao.pdf" download target="_blank" rel="noreferrer">下载完整简历 PDF <span>↘</span></a>
       </div>
       <div class="footer-bottom">
-        <span>© 2026 杜泽浩</span>
+        <span>© 2026 ECOKATER / 杜泽浩</span>
         <a class="icp-link" href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer">蜀ICP备2026031629号</a>
-        <a href="#top">回到顶部 ↑</a>
+        <a href="#top">BACK TO TOP ↑</a>
       </div>
     </footer>
+
   </main>
   <script src="script.js"></script>
 </body>
